@@ -1,4 +1,6 @@
+import { Menu, X } from "lucide-react";
 import Links from "./Links";
+import { useState } from "react";
 
 const navigationData = [
   {
@@ -29,8 +31,38 @@ const navigationData = [
 ];
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <nav>
+    <nav className="flex justify-between w-11/12 mx-auto mt-5">
+      <span className="flex gap-2">
+        <span className="md:hidden" onClick={() => setOpen(!open)}>
+          {open ? <X /> : <Menu />}
+
+          <div className="md:hidden">
+            <ul className="my-2  ">
+              {navigationData.map((route) => (
+                <li key={route.id}>
+                  <Links route={route} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </span>
+
+        <h3>My Navbar</h3>
+      </span>
+      <div className="hidden md:block">
+        <ul className="flex gap-5  ">
+          {navigationData.map((route) => (
+            <li key={route.id}>
+              <Links route={route} />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <button className="btn btn-ghost">Sign In</button>
+
       {/* <ul className="flex gap-4 justify-center my-5 ">
         <li>
           <a href="/">Home</a>
@@ -42,14 +74,6 @@ const Navbar = () => {
           <a href="/blog">BLog</a>
         </li>
       </ul> */}
-
-      <ul className="flex gap-5 justify-center mt-5">
-        {
-            navigationData.map(route => <li   key={route.id}>
-                <Links route={route} />
-            </li>)
-        }
-      </ul>
     </nav>
   );
 };
