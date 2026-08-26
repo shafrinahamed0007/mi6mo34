@@ -35,11 +35,11 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between w-11/12 mx-auto mt-5">
       <span className="flex gap-2">
-        <span className="md:hidden" onClick={() => setOpen(!open)}>
+        <span className="flex md:hidden" onClick={() => setOpen(!open)}>
           {open ? <X /> : <Menu />}
 
           <div className="md:hidden">
-            <ul className="my-2  ">
+            <ul className={`my-2 absolute duration-1000 ${open ? 'top-[40px]':'top-[-130px]'}`}>
               {navigationData.map((route) => (
                 <li key={route.id}>
                   <Links route={route} />
@@ -48,9 +48,9 @@ const Navbar = () => {
             </ul>
           </div>
         </span>
-
         <h3>My Navbar</h3>
       </span>
+
       <div className="hidden md:block">
         <ul className="flex gap-5  ">
           {navigationData.map((route) => (

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "plan-basic",
+    "name": "Basic Access",
+    "description": "Ideal for casual gym-goers looking for standard floor access.",
+    "price": {
+      "monthly": 29.99,
+      "annual": 299.99,
+      "currency": "USD"
+    },
+    "features": [
+      "Access to cardio and strength equipment",
+      "Standard locker room access",
+      "1 free fitness orientation session",
+      "Access during standard gym hours (6 AM - 10 PM)"
+    ],
+    "isPopular": false
+  },
+  {
+    "id": "plan-pro",
+    "name": "Pro Fitness",
+    "description": "Our most popular plan for regular members who want classes and flexibility.",
+    "price": {
+      "monthly": 59.99,
+      "annual": 599.99,
+      "currency": "USD"
+    },
+    "features": [
+      "24/7 unlimited gym floor access",
+      "Unlimited group fitness classes (Spin, Yoga, HIIT)",
+      "Full locker room, sauna, and steam room access",
+      "1 guest pass per month",
+      "Free mobile app access for workout tracking"
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "plan-vip",
+    "name": "VIP Performance",
+    "description": "Comprehensive all-access pass for dedicated athletes and full-service training.",
+    "price": {
+      "monthly": 99.99,
+      "annual": 999.99,
+      "currency": "USD"
+    },
+    "features": [
+      "Everything included in the Pro plan",
+      "2 personal training sessions per month",
+      "Unlimited guest passes (1 guest per visit)",
+      "Custom nutrition and meal plan strategy",
+      "Towel service and private locker rental",
+      "Priority booking for premium boutique classes"
+    ],
+    "isPopular": false
+  }
+]
