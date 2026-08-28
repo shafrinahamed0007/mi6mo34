@@ -2,7 +2,7 @@ import PricingFeatures from "./PricingFeatures";
 
 const PricingCard = (pricing) => {
   // console.log(pricing);
-  const {features} = pricing.pricing;
+  const { features } = pricing.pricing;
   return (
     <div className="mt-10 border bg-blue-400 rounded-2xl p-5">
       <h1 className="text-3xl font-semibold">
@@ -19,10 +19,12 @@ const PricingCard = (pricing) => {
         {pricing?.pricing?.price?.annual}/year{" "}
         {pricing?.pricing?.price?.currency}
       </p>
-      {
-        features.map((feature,index) => <PricingFeatures key={index} feature={feature} />)
-      }
-     
+      {features.map((feature, index) => (
+        <PricingFeatures key={index} feature={feature} />
+      ))}
+      <div className="flex justify-center my-10 w-full ">
+        <button className="btn btn-soft btn-success w-full">Subscripe</button>
+      </div>
     </div>
   );
 };

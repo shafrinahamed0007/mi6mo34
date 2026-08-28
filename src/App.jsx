@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import PricingOptions from "./components/PricingOptions/PricingOptions";
 
+
 const pricingPromise = fetch("pricingData.json").then((res) => res.json());
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         >
           <PricingOptions pricingPromise={pricingPromise} />
         </Suspense>
+
+        
       </main>
     </>
   );
